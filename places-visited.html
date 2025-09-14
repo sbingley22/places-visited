@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Places Visited</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        background: blueviolet;
+      }
+      #main-container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        position: relative;
+      }
+      #map {
+        height: 100%;
+        object-fit: contain;
+      }
+      .location-container {
+        position: absolute;
+        cursor: pointer;
+      }
+      .location {
+        display: none;
+        z-index: 99;
+        position: fixed;
+        flex-direction: column;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #795;
+        padding: 20px;
+        font-size: 1.6rem;
+        border: 2px solid black;
+        overflow: auto;
+      }
+      .location > div {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      .location > :first-child {
+        gap: 0;
+        max-width: 1280px;
+        margin: auto;
+      }
+      p {
+        text-align: center;
+        color: black;
+      }
+      h4 {
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 1.9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main-container">
+      <img src="england.png" id="map">
+
+      <div 
+        class="location-container" 
+        style="top: 14%; right: 50%;"
+      >
+        Ushaw
+        <div class="location">
+          <div>
+            <h4>Ushaw</h4>
+            <p>A large monastery recently converted to a B&B amongst other things. Has a nice garden, a cool little book room open 24hrs, and various exhibits.</p>
+            <p>Quite a nice place to stay.</p>
+          </div>
+          <div>
+            <img src="ushaw-1.jpg">
+            <img src="ushaw-2.jpg">
+            <img src="ushaw-3.jpg">
+          </div>
+        </div>
+      </div>
+
+      <div class="location-container" style="top: 15%; right: 47%;">
+        Durham
+        <div class="location">
+          <div>
+            <p>Historic posh city built on a hill complete with rivers, a castle, cathedral, old pubs, and lots of students. Everyone there is very fit and healthy. Nice place, similar to York.</p>
+          </div>
+          <div>
+            <img src="durham-1.jpg" alt="">
+            <img src="durham-2.jpg" alt="">
+            <img src="durham-3.jpg" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="location-container" style="top: 0%; right: 44%;">
+        Lindas Farne
+        <div class="location">
+          <div>
+            <h4>Lindas Farne</h4>
+            <p>An old healing / religous island that regularly gets cut off the mainland by the tide.</p>
+            <p>Interesting little village with a castle, church, pubs, etc.</p>
+            <p>A bit on the expensive side and out of the way but it was nice to see</p>
+          </div>
+          <div>
+            <img src="lindas-farne-1.jpg" alt="">
+            <img src="lindas-farne-2.jpg" alt="">
+            <img src="lindas-farne-3.jpg" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="location-container" style="top: 44%; left: 30%;">
+        Conway
+        <div class="location">
+          <div>
+            <h4>Conway</h4>
+            <p>A small yet very interesting old town. It boasts a visitable castle, walkable castle walls, a small harbour and beach, shops, pubs, and a nice decent sized woodland walk.</p>
+            <p>It's also relatively close to other interesting places to visit in wales.</p>
+            <p>I really like conway.</p>
+          </div>
+          <div>
+            <img src="conway-1.jpg">
+            <img src="conway-2.jpg">
+            <img src="conway-3.jpg">
+            <img src="conway-4.jpg" alt="">
+          </div>
+          
+        </div>
+      </div>
+
+    </div>
+
+    <script>
+      const locationContainers = document.querySelectorAll('.location-container')
+      const locations = document.querySelectorAll('.location')
+
+      locationContainers.forEach(lc => {
+        lc.addEventListener('click', function(event) {
+          showLocation(lc, event)
+        })
+      })
+      locations.forEach(loc => {
+        loc.addEventListener('click', function(event) {
+          hideLocation(loc)
+          event.stopPropagation()
+        })
+      })
+
+      function showLocation(element, event) {
+        if (event.target !== element) return
+        console.log(event)
+        const location = element.querySelector('.location')
+        if (!location) {
+          console.warn("Couldn't find location for ", element)
+          return
+        }
+        location.style.display = 'flex'
+      }
+
+      function hideLocation(element) {
+        console.log(element)
+        element.style.display = 'none'
+      }
+
+    </script>
+  </body>
+</html>
