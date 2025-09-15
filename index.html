@@ -21,26 +21,32 @@
         position: relative;
       }
       #map {
+        width: 100%;
         height: 100%;
-        object-fit: contain;
+        object-fit: fill;
       }
       .location-container {
         position: absolute;
         cursor: pointer;
+      }
+      .location-container:hover {
+        color: green;
+        font-size: 1.1rem;
       }
       .location {
         display: none;
         z-index: 99;
         position: fixed;
         flex-direction: column;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
+        top: 10vw;
+        left: 10vh;
+        max-width: 80vw;
+        max-height: 80vh;
         background: #795;
         padding: 20px;
         font-size: 1.6rem;
         border: 2px solid black;
+        border-radius: 2%;
         overflow: auto;
       }
       .location > div {
@@ -91,6 +97,7 @@
         Durham
         <div class="location">
           <div>
+            <h4>Durham</h4>
             <p>Historic posh city built on a hill complete with rivers, a castle, cathedral, old pubs, and lots of students. Everyone there is very fit and healthy. Nice place, similar to York.</p>
           </div>
           <div>
@@ -118,7 +125,7 @@
         </div>
       </div>
 
-      <div class="location-container" style="top: 44%; left: 30%;">
+      <div class="location-container" style="top: 44%; left: 20%;">
         Conway
         <div class="location">
           <div>
@@ -131,9 +138,235 @@
             <img src="conway-1.jpg">
             <img src="conway-2.jpg">
             <img src="conway-3.jpg">
-            <img src="conway-4.jpg" alt="">
+            <img src="conway-4.jpg">
           </div>
           
+        </div>
+      </div>
+
+      <div class="location-container" style="top: 47%; left: 18%;">
+        Canaervagn
+        <div class="location">
+          <div>
+            <h4>Canaeravan</h4>
+            <p>Nice little town complete with visitable castle, castle walls, old buildings, a harbour, and small beach.</p>
+            <p>We stayed at the black boy inns appartments, which was a nice vertical building.</p>
+          </div>
+          <div>
+            <img src="">
+          </div>
+        </div>
+      </div>
+
+      <div class="location-container" style="top: 41%; left: 16%;">
+        Landoudnou
+        <div class="location">
+          <div>
+            <h4>Landuodnuo</h4>
+            <p>Not very impressed by this, was a bit rough / run down, lots of boring shops, large concrete pier.</p>
+          </div>
+          <div>
+            <img src="">
+          </div>
+        </div>
+      </div>
+
+      <div class="location-container" style="top: 29%; left: 52%;">
+        Ripon
+        <div class="location">
+          <div>
+            <h4>Ripon</h4>
+            <p>Nice little city, smallest in England I think.</p>
+            <p>Had the Ripon horn blower who blows their horn 4 times at each corner of the city to let the citizens know they can sleep safe at night as the horn blower is on watch.</p>
+            <p>Had a nice cathedral, a bit of a canal, some old shops and pubs.</p>
+          </div>
+          <div>
+            <img src="">
+          </div>
+        </div>
+      </div>
+
+      <div class="location-container" style="top: 32%; left: 49%;">
+        Skipton
+        <div class="location">
+          <div>
+            <h4>Skipton</h4>
+            <p>Nice town complete with Canal, Castle, Woodland Walks, and old streets / shops / pubs.</p>
+            <p>I enjoyed my time here although the church insisted on playing its church bells super loud for hours on end to try to drown out the gay pride event.</p>
+            <p>The castle was interesting, a small but good size to give you an idea of what castle life was like.</p>
+            <p>The woods behind the castle looked cool though I only walked a bit of them as my symptoms were playing up.</p>
+          </div>
+          <div>
+            <img src="">
+          </div>
+        </div>
+      </div>
+
+      <div class="location-container" style="top: 31%; left: 53%;">
+        Knaresborough
+        <div class="location">
+          <div>
+            <h4>Knaresborough</h4>
+            <p>Only stayed here briefly but it was a very nice place.</p>
+            <p>Theirs whats left of a big castle on the top of the hill with a walk down to the river below.</p>
+            <p>It has a viaduct and attractions like mother shiptons cave.</p>
+          </div>
+          <div>
+            <img src="">
+          </div>
+        </div>
+      </div>
+
+      <div class="location-container" style="top: 41%; left: 57%;">
+        Newark
+        <div class="location">
+          <div>
+            <h4>Newark</h4>
+            <p>Cool little town. Has castle walls, ruins, and moat / canal with bridge that you can walk around.</p>
+          </div>
+          <div>
+            <img src="">
+          </div>
+        </div>
+      </div>
+
+      <div class="location-container" style="top: 22%; left: 63%;">
+        Whitby
+        <div class="location">
+          <div>
+            <h4>Whitby</h4>
+            <p>Been here plenty of times. Best place to go to within reasonable range of Sheffield.</p>
+            <p>Goth weekends twice a year are interesting to observe.</p>
+            <p>Has a nice beach, spooky cathedral, old pubs and shops.</p>
+          </div>
+          <div>
+            <img src="">
+          </div>
+        </div>
+      </div>
+
+      <div class="location-container" style="top: 21%; left: 62%;">
+        Sandsend
+        <div class="location">
+          <div>
+            <h4>Sandsend</h4>
+            <p>Nice place to stay if you want to visit whitby, small place though.</p>
+            <p>Has a nice woodland walk and beach.</p>
+            <p>We stayed in a particularly nice place that was like a mini mansion complete with garden.</p>
+          </div>
+          <div>
+            <img src="">
+          </div>
+        </div>
+      </div>
+
+      <div class="location-container" style="bottom: 3%; left: 11%;">
+        Totness
+        <div class="location">
+          <div>
+            <h4>Totness</h4>
+            <p>Only stayed here briefly, seemed posh and nice enough.</p>
+          </div>
+          <div>
+            <img src="">
+          </div>
+        </div>
+      </div>
+
+      <div class="location-container" style="bottom: 2%; left: 10%;">
+        Paiton
+        <div class="location">
+          <div>
+            <h4>Paiton</h4>
+            <p>We stayed in a caravan here near a beach. Nice place if you fancy walking. Has woodland and beach walks to get to other areas.</p>
+          </div>
+          <div>
+            <img src="">
+          </div>
+        </div>
+      </div>
+
+      <div class="location-container" style="top: 28%; left: 57%;">
+        Thirsk
+        <div class="location">
+          <div>
+            <h4>Thirsk</h4>
+            <p>Small town, not much to do, dog bit my hand and the owner just scurried off.</p>
+            <p>Wouldn't visit again.</p>
+          </div>
+          <div>
+            <img src="">
+          </div>
+        </div>
+      </div>
+
+      <div class="location-container" style="top: 55%; left: 80%;">
+        Norwich
+        <div class="location">
+          <div>
+            <h4>Norwich</h4>
+            <p>Just stopped off here. Seemed a nice historic city.</p>
+          </div>
+          <div>
+            <img src="">
+          </div>
+        </div>
+      </div>
+
+      <div class="location-container" style="top: 48%; left: 24%;">
+        Port Merion
+        <div class="location">
+          <div>
+            <h4>Port Merion</h4>
+            <p>Very nice place. Some rich guy decided to buy up a bunch of wierd and colorful things and make a village out of it.</p>
+            <p>Its a holiday destination now and you have to pay to get in but I'd say its worth it. There's plenty to do their. You can easily spend 3-4 hrs.</p>
+            <p>The drive in was nice too.</p>
+          </div>
+          <div>
+            <img src="">
+          </div>
+        </div>
+      </div>
+
+      <div class="location-container" style="top: 30%; left: 43%;">
+        Manchester
+        <div class="location">
+          <div>
+            <h4>Manchester</h4>
+            <p>Was feeling really shitty when I visited here so I didn't enjoy it.</p>
+            <p>The city itself is nice, does feel like a mini London up north.</p>
+          </div>
+          <div>
+            <img src="">
+          </div>
+        </div>
+      </div>
+
+      <div class="location-container" style="top: 72%; left: 70%;">
+        London
+        <div class="location">
+          <div>
+            <h4>London</h4>
+            <p>Been here a few time for hospital appointments.</p>
+            <p>It's an interesting place with plenty to see and do. Museums, parks, canals, old important building, modern buildings.</p>
+            <p>Some areas are rough. It's always packed.</p>
+          </div>
+          <div>
+            <img src="">
+          </div>
+        </div>
+      </div>
+
+      <div class="location-container" style="top: -50%; left: 0%;">
+        Example
+        <div class="location">
+          <div>
+            <h4></h4>
+            <p></p>
+          </div>
+          <div>
+            <img src="">
+          </div>
         </div>
       </div>
 
